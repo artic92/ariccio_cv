@@ -139,6 +139,7 @@
 \newcommand{\cvdate}[1]{\renewcommand{\cvdate}{#1}}
 \newcommand{\cvlinkedin}[1]{\renewcommand{\cvlinkedin}{#1}}
 \newcommand{\cvgithub}[1]{\renewcommand{\cvgithub}{#1}}
+\newcommand{\cvtwitter}[1]{\renewcommand{\cvtwitter}{#1}}
 \newcommand{\cvmail}[1]{\renewcommand{\cvmail}{#1}}
 \newcommand{\cvnumberphone}[1]{\renewcommand{\cvnumberphone}{#1}}
 \newcommand{\cvaddress}[1]{\renewcommand{\cvaddress}{#1}}
@@ -173,6 +174,13 @@
 	}
 }
 
+% Command for printing languages
+\newcommand\languages[1]{ 
+	\renewcommand{\languages}{
+		{#1}
+	}
+}
+
 % Command for printing interests
 \newcommand\interests[1]{ 
 	\renewcommand{\interests}{
@@ -190,6 +198,20 @@
 % Command for printing volunteering in sidebar
 \newcommand\volunteering[1]{ 
 	\renewcommand{\volunteering}{
+		{#1}
+	}
+}
+
+% Command for printing notes in sidebar
+\newcommand\notes[1]{ 
+	\renewcommand{\notes}{
+		{#1}
+	}
+}
+
+% Command for printing certifications in sidebar
+\newcommand\certifications[1]{ 
+	\renewcommand{\certifications}{
 		{#1}
 	}
 }
@@ -230,7 +252,6 @@
               \end{array}
               $} 
             & \cvnumberphone\\}
-            
       %\ifthenelse{\equal{\href{\cvsite}{\cvsite}}{}}{}{
       %      {$
       %        \begin{array}{l}
@@ -245,14 +266,27 @@
               \end{array}
               $} 
             & \href{mailto:\cvmail}{\cvmail} \\}
-      
+      \ifthenelse{\equal{\cvaddress}{}}{}{
+      		{$
+              \begin{array}{l}
+              \hspace{3mm} \huge \textnormal{\faHome} 
+              \end{array}
+              $} 
+            & \cvaddress\\}     
        \ifthenelse{\equal{\cvlinkedin}{}}{}{
             {$
               \begin{array}{l}
-              \hspace{3mm} \huge \textnormal{\textcolor{linkedin}{\faLinkedin}}
+              \hspace{3mm} \huge \textnormal{\textcolor{linkedin}{\faLinkedinSquare}}
               \end{array}
               $} & \href{https://www.linkedin.com\cvlinkedin}{\cvlinkedin} \\
             }  
+        \ifthenelse{\equal{\cvtwitter}{}}{}{
+            {$
+              \begin{array}{l}
+              \hspace{3mm} \huge \textnormal{\faTwitterSquare}
+              \end{array}
+              $} & \href{https://twitter.com/\cvtwitter}{\cvtwitter} \\
+            }   
         \ifthenelse{\equal{\cvgithub}{}}{}{
             {$
               \begin{array}{l}
@@ -260,7 +294,6 @@
               \end{array}
               $} & \href{https://www.github.com/\cvgithub}{\cvgithub} \\
             }   
-            
     \end{tabular}
 
     %------------------------------------------------
@@ -268,13 +301,13 @@
     \profilesection{Interests}{3cm}
     
     \interests
+    
+    %------------------------------------------------    
+    
+    \profilesection{About Me}{3cm}
+    
+    \aboutme
         
-    %------------------------------------------------
-    
-    \profilesection{Skills}{4cm} 
-    
-    \skills
-    
     %------------------------------------------------
     
     %\vspace{1mm}
@@ -284,14 +317,80 @@
     \education
     
     %------------------------------------------------
-    
-    %\vspace{1mm}
-         
-    %\profilesection{Volunteering}{2cm} 
-    
-    %\volunteering
       
   \end{textblock}
+}
+
+
+%----------------------------------------------------------------------------------------
+%  SIDEBAR LAYOUT 2
+%----------------------------------------------------------------------------------------
+
+\newcommand{\makeextrainfo}{
+    
+    \begin{tikzpicture}[remember picture,overlay]
+        \node [rectangle, fill=sidecolor, anchor=north, minimum width=9cm, minimum height=\paperheight+1cm] (box) at (-5cm,0.5cm){};
+    \end{tikzpicture}
+    
+    %------------------------------------------------
+      
+    \begin{textblock}{6}(0.5, 0.2)
+        %------------------------------------------------
+    
+        \vspace{4mm}
+        {\Huge\color{pblue}\cvname}
+        
+        \vspace{2mm}
+    
+        %------------------------------------------------
+        
+        %------------------------------------------------
+    
+        {\Large\color{black!80}\cvjobtitle}
+
+        %------------------------------------------------
+    
+        %------------------------------------------------
+        
+        \profilesection{Skills}{4cm} 
+        
+        \skills
+        
+        %------------------------------------------------
+        
+        %\vspace{1mm}
+         
+        \profilesection{Languages}{2.6cm} 
+    
+        \languages
+        
+        %------------------------------------------------
+        
+        %\vspace{1mm}
+         
+        \profilesection{Certifications}{1.8cm} 
+    
+        \certifications
+    
+        %------------------------------------------------      
+        
+        %\vspace{1mm}
+         
+        \profilesection{Volunteering}{2cm} 
+    
+        \volunteering
+    
+        %------------------------------------------------   
+        
+        %\vspace{1mm}
+         
+        \profilesection{Notes}{4.3cm} 
+    
+        \notes
+    
+        %------------------------------------------------   
+        
+    \end{textblock}
 }
 
 %----------------------------------------------------------------------------------------

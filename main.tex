@@ -1,0 +1,414 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Twenty Seconds Resume/CV
+% LaTeX Template
+% Version 1.0 (14/7/16)
+%
+% Original author:
+% Carmine Spagnuolo (cspagnuolo@unisa.it) with major modifications by
+% Vel (vel@LaTeXTemplates.com) and Harsh (harsh.gadgil@gmail.com)
+%
+% License:
+% The MIT License (see included LICENSE file)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[letterpaper]{twentysecondcv} % a4paper for A4
+
+%----------------------------------------------------------------------------------------
+%	 PERSONAL INFORMATION
+%----------------------------------------------------------------------------------------
+
+\cvname{Antonio Riccio}
+\cvjobtitle{ Computer Engineer \\ Embedded \& Industrial \\ Systems }
+
+\cvnumberphone{(+44) 7724 799572}
+\cvmail{antonio.riccio.27@gmail.com}
+\cvlinkedin{/in/antonioriccio}
+\cvgithub{artic92}
+\cvaddress{London, United Kingdom}
+\cvtwitter{AntonioRiccio27}
+%\aboutme{\summaryfirst}
+\aboutme{\summarysecond}
+\notes{\textit{Available to relocate}}
+
+\newcommand{\summaryfirst}[1]{
+Young Embedded Engineer striving to commence a career in the space industry. Amazed about everything crosses space: from satellites and probes to rockets and spaceships. My passion is to discover each detail concerning the reliability and safety of computer hardware \& software. Enthusiast about Linux Kernel and hard believer in the power of bash to solve each problem.
+} 
+
+\newcommand{\summarysecond}[1]{
+Passionate, motivated, curious and ambitious are my most identifying traits. I am very fond of astronomy and physics. I love reading books regarding relativistic \& quantum mechanics, astrophysics, and psychology. I enjoy doing sport as well. I practice jogging but I love to swim and play football also.
+}
+
+\newcommand{\loremipsum}[1]{Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Vulputate mi sit amet mauris commodo. Volutpat ac tincidunt.}
+
+%----------------------------------------------------------------------------------------
+%	INTERESTS
+%----------------------------------------------------------------------------------------
+
+% Command for printing skill overview bubbles
+\interests{
+	\smartdiagram[bubble diagram]{
+        \textbf{Embedded}\\\textbf{Systems},
+        \textbf{~~~~~~Linux~~~~~~}\\\textbf{~~~~~Kernel~~~~~},
+        \textbf{~~~~FPGA~~~~}\\\textbf{~~~SoC~~~},
+        \textbf{~~~~~~Safety~~~~~~}\\\textbf{~~~Systems~~~},
+        \textbf{~~~~RTOS~~~~},
+        %\textbf{Hardware}\\\textbf{Security},
+        \textbf{Trust}\\\textbf{Computing},
+        %\textbf{CPU}\\\textbf{Architectures},
+        \textbf{Internet of}\\\textbf{~~Things~~}
+        %\textbf{~~Device~~}\\\textbf{~~Drivers~~}
+    }
+}
+
+%----------------------------------------------------------------------------------------
+%	SKILLS
+%----------------------------------------------------------------------------------------
+
+\skills{
+    % Soft Skills
+    {Adaptable $\textbullet$ Open-minded $\textbullet$ Rigorous / 6},
+    {Positive $\textbullet$ Team-player $\textbullet$ Determined / 6},
+    {Curious $\textbullet$ Motivated $\textbullet$ Passionate / 6},
+    % Documentation writing
+    {Markdown $\textbullet$ Doxygen $\textbullet$ \large \LaTeX / 6},
+    % Scripting languages
+    %{Bash $\textbullet$ Python/ 6},
+    % OSs & RTOSs
+    {Linux $\textbullet$ FreeRTOS $\textbullet$ RTAI $\textbullet$ eCos / 6},
+    % Safety-related tools
+    {FMEA $\textbullet$ RBD $\textbullet$ Fault Trees $\textbullet$ FFDA / 6},
+    % HW Platforms
+    {CPU $\textbullet$ MCU $\textbullet$ SoC $\textbullet$ FPGA $\textbullet$ ASIC/ 6},
+    % Vendors
+    %{ARM $\textbullet$ Xilinx $\textbullet$ ST Microelectronics/ 6},
+    % Serial buses
+    {I2C $\textbullet$ SPI $\textbullet$ USART $\textbullet$ AXI $\textbullet$ USB/ 6},
+    % Programming languages
+    {C $\textbullet$ C++ $\textbullet$ Assembler $\textbullet$ Java/ 6},
+    % HDLs
+    {VHDL $\textbullet$ SystemVerilog}
+}
+    
+%----------------------------------------------------------------------------------------
+%	LANGUAGES
+%----------------------------------------------------------------------------------------
+
+\languages{
+    \begin{itemize}
+        \item \textbf{Italian}\hspace{3.3mm}| mothertongue
+        \item \textbf{English}\hspace{2mm}| C1 | \textbf{certified}
+        \item \textbf{French}\hspace{2.8mm}| A2
+    \end{itemize}
+}
+
+%----------------------------------------------------------------------------------------
+%	CERTIFICATIONS
+%----------------------------------------------------------------------------------------
+
+\certifications{
+    \href{https://www.cambridgeenglish.org/exams-and-tests/advanced/}{\textbf{Certificate in Advanced English (CAE)}} |
+    \textit{Cambridge Assessment English} | 2019
+    
+    \vspace{1mm}
+    
+    \href{https://courses.edx.org/certificates/cceafff55a9b42c28bd1c0056e1d574c}{\textbf{MITx 16.885x: Engineering the Space Shuttle}} |
+    \textit{edX} | 2019
+    %
+    %\vspace{1mm}
+    %
+    %\href{https://www.edx.org/course/the-conquest-of-space-space-exploration-and-rocket}{\textbf{The Conquest of Space: Space Exploration and Rocket Science}} |
+    %\textit{edX} | 2020
+}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+
+\education{
+    \textbf{M.Sc. Computer Engineering} | \\
+    \textit{Embedded \& Industrial Systems} \\
+    (110/110 \textit{cum laude}) \\
+    University Federico II \\
+    Naples, Italy | 2015 - 2019
+
+    \vspace{1mm}
+
+    \textbf{B.Sc. Computer Engineering} \\
+    (107/110) \\
+    University Federico II \\
+    Naples, Italy | 2011 - 2015
+}
+
+%----------------------------------------------------------------------------------------
+%	VOLUNTEERING
+%----------------------------------------------------------------------------------------
+
+\volunteering{    
+    \href{http://www.erasmusnapoli.it/}{\textbf{Erasmus Student Association (ESA)}} |
+    Supporting incoming Erasmus students
+    \textit{Associate} | Naples, 2019
+    
+    \vspace{1mm}
+    
+    \href{https://www.goodgym.org/about}{\textbf{GoodGym Slough}} | \textit{Associate}\\
+    Charity and running group supporting local community | 
+    Slough, 2019-present
+}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+\makeprofile % Prints the sidebar
+
+%----------------------------------------------------------------------------------------
+%	 EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+\section{Experience}
+
+\begin{twenty} % Environment for a list with descriptions
+    \twentyitem
+    	{May 2019 -}
+		{now}
+        {Junior Embedded Software Engineer}
+        {\href{https://www.airspan.com/}{Airspan Networks, London}}
+        {}
+        {
+            \textbf{Application Engineer}\\
+            Development of \textbf{embedded software} for the Relay part of 5G and LTE backhaul products.
+            \begin{itemize}
+                \item design and development of software in C/C++
+                \item debugging software by understanding its architecture and main interactions
+                \item \textbf{document-driven} analysis and development
+                \item understanding of company's development methodologies, techniques and tools
+                \item application \textbf{testing} and \textbf{deployment} on the real devices
+                \item developing of multicore, multithreading, socket programming in \textbf{linux}
+                \item application development for LTE and 5G UE modules
+                \item \textbf{debugging} adopting network analyzer tools like Wireshark, tcpdump and iperf
+            \end{itemize}
+            
+            \textbf{Platform Engineer}\\
+            Integration of the Linux kernel into the mainline products.
+            \begin{itemize}
+                \item design and development of \textbf{user-space} and \textbf{kernel-space} software for the \textbf{Linux} kernel
+                \item working on NXP, Qualcomm, Xilinx \textbf{SoCs} for the LTE and 5G backhaul products
+                \item integrating the newest kernel versions into Airspan products
+                \item writing \textbf{device drivers} to integrate new devices
+                \item Linux target and development environment
+            \end{itemize}
+            
+            \textit{Keywords}: \textbf{Microcontroller}, \textbf{i.MX}, \textbf{Zynq ARM/FPGA SoC}, \textbf{LTE}, \textbf{5G}
+        }\\
+    \twentyitem
+    	{Jan 2018 -}
+		{Aug 2018}
+        {Software Engineer Intern}
+        {\href{https://www.montimage.com/}{Montimage, Paris}}
+        {}
+        {
+            Realization of an \textbf{Intrusion Detection System} for the \textbf{IoT}
+            \begin{itemize}
+                \item Deep understanding of the \textbf{IEEE 802.15.4} technology 
+                \item Security Analysis of the \textbf{6loWPAN} stack
+                \item State-of-the-art study of \textbf{IoT/CPS} security threats
+                \item Incremental development in C
+                \item Network simulations with \textbf{Cooja} framework
+                \item Integration of legacy code
+                \item Working in a team
+                \item Participation in the company's meeting
+                \item Participation in conference calls with partners and researchers
+                \item Producing \textbf{technical ocumentation}
+            \end{itemize}
+            Project: \href{http://www.anastacia-h2020.eu/}{\textbf{EU Horizon 2020 ANASTACIA}}\\
+            \textit{Keywords}: \textbf{Apache Kafka}, \textbf{Apache Storm}, \textbf{Cooja}, \textbf{Contiki}, \textbf{IoT}
+        }\\
+    \twentyitem
+   		{Sep 2017 -}
+		{Jan 2018}
+        {Graduate Teaching Assistant}
+        {\href{http://www.scuolapsb.unina.it/}{DIETI, University of Naples}}
+        {}
+        {
+            Delivered \textbf{lectures} to students from undergraduate courses
+            \begin{itemize}
+                \item Presenting concepts of \textbf{object-oriented programming} and \textbf{software testing}
+                \item Presenting concepts of \textbf{mathematical analysis}
+                \item Preparing lab materials including \textbf{assignments}, and the \textbf{final exam}
+            \end{itemize}
+        }
+\end{twenty}
+
+%----------------------------------------------------------------------------------------
+%	 COURSES
+%----------------------------------------------------------------------------------------
+
+\section{Courses}
+
+\href{https://www.edx.org/course/engineering-the-space-shuttle}{\textbf{Engineering the Space Shuttle}}, Prof. \textit{Jeff Hoffman} |
+\href{https://www.edx.org/course/the-conquest-of-space-space-exploration-and-rocket}{\textbf{Space Exploration and Rocket Science}}, Prof. \textit{Eduardo Ahedo Galilea} |
+\textbf{Embedded Systems}, Prof. \href{https://www.docenti.unina.it/antonino.mazzeo}{\textit{Antonino Mazzeo}} |
+\textbf{Digital Systems Design}, \href{https://www.researchgate.net/profile/Mario_Barbareschi}{\textit{Mario Barbareschi}} |
+\textbf{Advanced Computer Architectures \& GPU Programming}, Prof. \href{https://www.docenti.unina.it/alessandro.cilardo}{\textit{Alessandro Cilardo}} |
+\textbf{Computer Systems Dependability}, Prof. \href{https://www.docenti.unina.it/domenico.cotroneo}{\textit{Domenico Cotroneo}} |
+\textbf{Software Engineering}, Prof. \href{https://www.docenti.unina.it/stefano.russo}{\textit{Stefano Russo}} |
+\textbf{Numeric Calculus}, Prof. \href{https://www.docenti.unina.it/alessandra.dalessio}{\textit{Alessandra d'Alessio}} |
+\textbf{Computer Architectures I}, Prof. \href{https://www.docenti.unina.it/antonio.pescape}{\textit{Antonio Pescapè}} |
+\textbf{Computer Architectures II}, Prof. \href{https://www.docenti.unina.it/nicola.mazzocca}{\textit{Nicola Mazzocca}} |
+\textbf{Algorithms and Data Structures}, Prof. \href{https://www.docenti.unina.it/stefano.avallone}{\textit{Stefano Avallone}} |
+\textbf{Computer Networks}, Prof. \href{https://www.docenti.unina.it/giorgio.ventre}{\textit{Giorgio Ventre}} |
+%\textbf{Web Applications \& Streaming Technologies}, Prof. \href{https://www.docenti.unina.it/simonpietro.romano}{\textit{Simon Pietro Romano}} |
+%\textbf{Software Engineering II}, Prof. \href{https://www.docenti.unina.it/annarita.fasolino}{\textit{Anna Rita Fasolino}} |
+\textbf{Programming Languages}, Prof. \href{https://www.docenti.unina.it/marcello.cinque}{\textit{Marcello Cinque}} |
+%\textbf{Relational Databases}, Prof. \href{https://www.docenti.unina.it/antonio.picariello}{\textit{Antonio Picariello}} |
+\textbf{Distributed Systems}, Prof. \href{https://www.docenti.unina.it/stefano.russo}{\textit{Stefano Russo}} |
+\textbf{Secure Systems Design}, Prof. \href{ttps://www.docenti.unina.it/mario.tanda}{\textit{Mario Tanda}}
+
+\newpage
+\makeextrainfo % Prints the sidebar
+
+%----------------------------------------------------------------------------------------
+%	 RESEARCH
+%----------------------------------------------------------------------------------------
+\section{Research}
+\begin{twenty}
+	\twentyitem
+    	{Sep 2018 -}
+		{Jan 2019}
+        {M.Sc. Candidate}
+        {\href{http://www.scuolapsb.unina.it/}{University of Naples, Federico II}}
+        {}
+        {
+       	\textbf{Paper}: A Security Monitoring System for the Internet of Things.  \textit{Internet of Things: Engineering Cyber Physical Human Systems}, 2019 \\
+       	\textbf{Thesis}: \textit{Design of an \textbf{Intrusion Detection System} for IoT Security}
+        {
+            \begin{itemize}
+                \item Proposed an Intrusion Detection System for 6LoWPAN-based IoT networks, in collaboration with the Montimage company
+                \item Analysis of the open challenges, reference architectures, vulnerabilities in the context of \textbf{IoT security}
+                \item Deep understanding of the \textit{IEEE 802.15.4} technologies and the \textit{6LoWPAN} protocol stack
+		    \end{itemize}}
+            \textit{Keywords}: \textbf{MMT}, \textbf{Contiki}, \textbf{Cooja}, \textbf{IoT}, \textbf{IEEE 802.15.4}, \textbf{6LoWPAN}
+        }
+\end{twenty}
+%
+%----------------------------------------------------------------------------------------
+%	 PUBLICATIONS
+%----------------------------------------------------------------------------------------
+%
+\section{Publications}
+ V. Casola, A. De Benedictis, A. Riccio, D. Rivera, W. Mallouli, and E. Montes De Oca, \href{https://www.researchgate.net/publication/334175322_A_security_monitoring_system_for_Internet_of_Things}{\textbf{A security monitoring system for Internet of Things}}. \textit{Internet of Things: Engineering Cyber Physical Human Systems}, 2019.
+%
+%----------------------------------------------------------------------------------------
+%	 PROJECTS
+%----------------------------------------------------------------------------------------
+%
+\section{Projects}
+
+\begin{twenty}
+%	\twentyitem
+%    	{Oct 2017 -}
+%		{Dec 2017}
+%        {Nu+: an open-source GPU-like processor core (SystemVerilog)}
+%        {}
+%        {}
+%        {
+%            \begin{itemize}
+%                \item Deep understanding of Cache Coherence Subsystem functioning
+%                \item Aligning existing documentation to the newest advancements
+%                \item Producing documentation sections on the newest subsystems
+%		    \end{itemize}
+%		}\\
+	\twentyitem
+    	{Mar 2017 -}
+		{Jul 2017}
+        {GNSS Synchronisation \& Bistatic Passive Radar (VHDL, C)}
+        {\href{https://github.com/artic92/sistemi-embedded-task2}{on GitHub}}
+        {}
+        {
+            Realization of IP cores for the subsystem in charge of synchronizing with a reference GNSS satellite. Working in a team of 3.
+            \begin{itemize}
+                %item Designing with \textbf{Xilinx Vivado}
+                \item Produced internal and external documentation
+                \item Presented the results to the stakeholders
+                \item Collaborated with other teams for integration
+                \item Integrated into the stackeholder systems
+		    \end{itemize}
+            \textit{Keywords}: \textbf{Vivado}, \textbf{Modelsim}, \textbf{Zynq ARM/FPGA SoC}, \textbf{Linux}
+        }\\
+	\twentyitem
+    	{Sep 2015 -}
+		{Dec 2015}
+        {Arithmetic Logic Unit (ALU) Implementation (VHDL)}
+        {\href{https://github.com/artic92/alu_xilinx}{on GitHub}}
+        {}
+        {
+            Realisation of a custom ALU using Xilinx toolchain. Working in a team of 3.
+            Project available on Github.
+            \begin{itemize}
+                \item Realisation of a custom ALU. Working in a team of 3.
+                \item Generalised desing approach
+                \item Evaluation in terms of performance, area, and delay
+                \item Collaborative development using Git
+		    \end{itemize}
+            \textit{Keywords}: \textbf{ISE}, \textbf{Modelsim}, \textbf{Timing Analyser}, \textbf{Spartan-3E FPGA}
+        }\\
+    \twentyitem
+    	{Sep 2015 -}
+		{Dec 2015}
+        {GPIO Custom Implementation (C, VHDL)}
+        {\href{https://github.com/artic92/gpio-zynq-7000}{on GitHub}}
+        {}
+        {
+        Implementation of a custom GPIO. Using Xilinx Zynq-7000 ARM/FPGA SoC. 
+        Project available on Github.
+            \begin{itemize}
+                \item Writing internal documentation with Doxygen
+                \item Description of the hardware in VHDL
+                \item Developed BSP, drivers in MMAP, UIO, and kernel-space
+		    \end{itemize}
+		    \textit{Keywords}: \textbf{Vivado}, \textbf{Modelsim}, \textbf{Zynq ARM/FPGA SoC}, \textbf{AMBA/AXI}
+        }\\
+    \twentyitem
+    	{Mar 2015 -}
+		{Jun 2015}
+        {Triple Modular Redundancy (TMR) Scheme (C, RTOS)}
+        {\href{https://github.com/artic92/tmr_rtai}{on GitHub}}
+        {}
+        {
+        {
+            Realization of a TMR scheme in software. Using RTAI real-time OS.
+            %Project available of Github.
+            \begin{itemize}
+                \item Incremental development in C
+                \item Schedulability assessment
+                \item Faults injection testing
+		    \end{itemize}
+		    \textit{Keywords}: \textbf{RTAI}, \textbf{RTOS}, \textbf{Linux kernel}, \textbf{Dependability}, \textbf{TMR}
+		}
+        }\\
+    \twentyitem
+    	{Mar 2015 -}
+		{Jun 2015}
+        {Custom BSP for ST Microelectronics Microcontrollers (C)}
+        {\href{https://github.com/artic92/stm32-bsp}{on GitHub}}
+        {}
+        {
+        {
+            Custom \textbf{Board Support Package} (BSP) for ST Microelectronics Microcontrollers \textit{stm32fxx} family.
+            Project avalable on Github.
+            \begin{itemize}
+                \item Implementation using ST Hardware Abstraction Layer (HAL)
+                \item Testing on STM32F4, STM32F3 and STM32F0 (NUCLEO) MCUs
+                \item Writing Internal documentation with Doxygen
+                \item Writing external documentation
+		    \end{itemize}
+            \textit{Keywords}: \textbf{Doxygen}, \textbf{ST CubeMX}, \textbf{Hardware Abstraction Layer}
+		}
+        }
+\end{twenty}
+
+\end{document}
