@@ -138,6 +138,7 @@
 % Define custom commands for CV info
 \newcommand{\cvdate}[1]{\renewcommand{\cvdate}{#1}}
 \newcommand{\cvlinkedin}[1]{\renewcommand{\cvlinkedin}{#1}}
+\newcommand{\linkedinnameshown}[1]{\renewcommand{\linkedinnameshown}{#1}}
 \newcommand{\cvgithub}[1]{\renewcommand{\cvgithub}{#1}}
 \newcommand{\cvtwitter}[1]{\renewcommand{\cvtwitter}{#1}}
 \newcommand{\cvmail}[1]{\renewcommand{\cvmail}{#1}}
@@ -278,7 +279,7 @@
               \begin{array}{l}
               \hspace{3mm} \huge \textnormal{\textcolor{linkedin}{\faLinkedinSquare}}
               \end{array}
-              $} & \href{https://www.linkedin.com\cvlinkedin}{\cvlinkedin} \\
+              $} & \href{https://www.linkedin.com/in/\cvlinkedin}{\linkedinnameshown} \\
             }  
         \ifthenelse{\equal{\cvtwitter}{}}{}{
             {$
