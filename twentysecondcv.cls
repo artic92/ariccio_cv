@@ -162,56 +162,123 @@
 }
 
 % Command for printing skills
-\newcommand\skills[1]{ 
-	\renewcommand{\skills}{
-		\begin{tikzpicture}
-        	%\node [above right] at (0, 4) {$0 \: LOC \: \arrow{3.2} \: 5000 \: LOC$};
-			\foreach [count=\i] \x/\y in {#1}{
-				\draw[fill=maingray,maingray] (0,\i) rectangle (6,\i+0.4);
-				%\draw[fill=white,mainblue](0,\i) rectangle (\y,\i+0.4);
-				\node [above right] at (0,\i+0.35) {\x};
-			}
-		\end{tikzpicture}
-	}
+\newcommand\skills[1]{
+    \renewcommand{\givenskill}{
+        \noindent
+        \begin{tikzpicture}
+        \foreach [count=\i] \x/\y in {#1}
+        {
+          \draw[fill=maingray,maingray] (0,-\i) rectangle (6,-\i+0.4);
+          \draw[fill=white,mainblue](0,-\i) rectangle (1.2*\y,-\i+0.4);
+          \node [above right ] at (0,-\i+0.4) {\x};
+          \foreach \z in {0,1,2,...,10}
+          {
+            \coordinate (A\z) at ($(0,-\i)+(1.2*\z*0.5cm,0)$) {};
+            \ifodd\z
+                \draw[white] ($(A\z)$) -- ($(A\z)+(0,2.5pt)$);
+            \else
+                \draw[white] ($(A\z)$) -- ($(A\z)+(0,5pt)$);
+            \fi
+          }
+        }
+        \end{tikzpicture}
+    }
+}
+\newcommand{\givenskill}{}
+
+\newcommand\skillstext[1]{
+
+\renewcommand{\giventextskill}{
+\begin{flushleft}
+\noindent
+\foreach [count=\i] \x/\y in {#1}
+{
+\x$ \star $\y
+}
+\end{flushleft}
+}
 }
 
+\newcommand{\giventextskill}{}
+
+
+% Command for printing soft skills
+\newcommand\softskills[1]{
+    \renewcommand{\givensoftskill}{
+        \noindent
+        \begin{tikzpicture}
+        \foreach [count=\i] \x/\y in {#1}
+        {
+          \draw[fill=maingray,maingray] (0,-\i) rectangle (6,-\i+0.4);
+          \draw[fill=white,mainblue](0,-\i) rectangle (1.2*\y,-\i+0.4);
+          \node [above right ] at (0,-\i+0.4) {\x};
+          \foreach \z in {0,1,2,...,10}
+          {
+            \coordinate (A\z) at ($(0,-\i)+(1.2*\z*0.5cm,0)$) {};
+            \ifodd\z
+                \draw[white] ($(A\z)$) -- ($(A\z)+(0,2.5pt)$);
+            \else
+                \draw[white] ($(A\z)$) -- ($(A\z)+(0,5pt)$);
+            \fi
+          }
+        }
+        \end{tikzpicture}
+    }
+}
+\newcommand{\givensoftskill}{}
+
+\newcommand\softskillstext[1]{
+
+\renewcommand{\giventextsoftskill}{
+\begin{flushleft}
+\noindent
+\foreach [count=\i] \x/\y in {#1}
+{
+\x$ \star $\y
+}
+\end{flushleft}
+}
+}
+
+\newcommand{\giventextsoftskill}{}
+
 % Command for printing languages
-\newcommand\languages[1]{ 
+\newcommand\languages[1]{
 	\renewcommand{\languages}{
 		{#1}
 	}
 }
 
 % Command for printing interests
-\newcommand\interests[1]{ 
+\newcommand\interests[1]{
 	\renewcommand{\interests}{
 		{#1}
 	}
 }
 
 % Command for printing education in sidebar
-\newcommand\education[1]{ 
+\newcommand\education[1]{
 	\renewcommand{\education}{
 		{#1}
 	}
 }
 
 % Command for printing volunteering in sidebar
-\newcommand\volunteering[1]{ 
+\newcommand\volunteering[1]{
 	\renewcommand{\volunteering}{
 		{#1}
 	}
 }
 
 % Command for printing notes in sidebar
-\newcommand\notes[1]{ 
+\newcommand\notes[1]{
 	\renewcommand{\notes}{
 		{#1}
 	}
 }
 
 % Command for printing certifications in sidebar
-\newcommand\certifications[1]{ 
+\newcommand\certifications[1]{
 	\renewcommand{\certifications}{
 		{#1}
 	}
@@ -231,94 +298,94 @@
   \begin{textblock}{6}(0.5, 0.2)
 
     %------------------------------------------------
-    
+
     \vspace{4mm}
     {\Huge\color{pblue}\cvname}
-    
+
     \vspace{2mm}
 
     %------------------------------------------------
-    
+
     {\Large\color{black!80}\cvjobtitle}
 
     %------------------------------------------------
-    
+
     \vspace{3mm}
     \renewcommand{\arraystretch}{2}
     \begin{tabular}{p{1cm} @{\hskip 0.5cm}p{5cm}}
       \ifthenelse{\equal{\cvnumberphone}{}}{}{
       		{$
               \begin{array}{l}
-              \hspace{4mm} \Huge \textnormal{\faMobile} 
+              \hspace{4mm} \Huge \textnormal{\faMobile}
               \end{array}
-              $} 
+              $}
             & \cvnumberphone\\}
       %\ifthenelse{\equal{\href{\cvsite}{\cvsite}}{}}{}{
       %      {$
       %        \begin{array}{l}
       %        \hspace{2.8mm} \huge \textnormal{\textcolor{test}{\faGlobe}}
       %        \end{array}
-      %        $} 
+      %        $}
       %      & \href{http://\cvsite}{\cvsite} \\}
       \ifthenelse{\equal{\cvmail}{}}{}{
             {$
               \begin{array}{l}
               \hspace{2.5mm} \huge \textnormal{\textcolor{yt}{\faEnvelopeO}}
               \end{array}
-              $} 
+              $}
             & \href{mailto:\cvmail}{\cvmail} \\}
       \ifthenelse{\equal{\cvaddress}{}}{}{
       		{$
               \begin{array}{l}
-              \hspace{3mm} \huge \textnormal{\faHome} 
+              \hspace{3mm} \huge \textnormal{\faHome}
               \end{array}
-              $} 
-            & \cvaddress\\}     
+              $}
+            & \cvaddress\\}
        \ifthenelse{\equal{\cvlinkedin}{}}{}{
             {$
               \begin{array}{l}
               \hspace{3mm} \huge \textnormal{\textcolor{linkedin}{\faLinkedinSquare}}
               \end{array}
               $} & \href{https://www.linkedin.com/in/\cvlinkedin}{\linkedinnameshown} \\
-            }  
+            }
         \ifthenelse{\equal{\cvtwitter}{}}{}{
             {$
               \begin{array}{l}
               \hspace{3mm} \huge \textnormal{\faTwitterSquare}
               \end{array}
               $} & \href{https://twitter.com/\cvtwitter}{\cvtwitter} \\
-            }   
+            }
         \ifthenelse{\equal{\cvgithub}{}}{}{
             {$
               \begin{array}{l}
               \hspace{3mm} \huge \textnormal{\faGithub}
               \end{array}
               $} & \href{https://www.github.com/\cvgithub}{\cvgithub} \\
-            }   
+            }
     \end{tabular}
 
     %------------------------------------------------
-    
+
     \profilesection{Interests}{3cm}
-    
+
     \interests
-    
-    %------------------------------------------------    
-    
+
+    %------------------------------------------------
+
     \profilesection{About Me}{3cm}
-    
+
     \aboutme
-        
+
     %------------------------------------------------
-    
+
     %\vspace{1mm}
-         
-    \profilesection{Education}{2.8cm} 
-    
+
+    \profilesection{Education}{2.8cm}
+
     \education
-    
+
     %------------------------------------------------
-      
+
   \end{textblock}
 }
 
@@ -328,69 +395,84 @@
 %----------------------------------------------------------------------------------------
 
 \newcommand{\makeextrainfo}{
-    
+
     \begin{tikzpicture}[remember picture,overlay]
         \node [rectangle, fill=sidecolor, anchor=north, minimum width=9cm, minimum height=\paperheight+1cm] (box) at (-5cm,0.5cm){};
     \end{tikzpicture}
-    
+
     %------------------------------------------------
-      
+
     \begin{textblock}{6}(0.5, 0.2)
         %------------------------------------------------
-    
+
         \vspace{4mm}
         {\Huge\color{pblue}\cvname}
-        
+
         \vspace{2mm}
-    
+
         %------------------------------------------------
-        
+
         %------------------------------------------------
-    
+
         {\Large\color{black!80}\cvjobtitle}
 
         %------------------------------------------------
-    
-        %------------------------------------------------
-        
-        \profilesection{Skills}{4cm} 
-        
-        \skills
-        
-        %------------------------------------------------
-        
+
         %\vspace{1mm}
-         
-        \profilesection{Languages}{2.6cm} 
-    
+
+        \profilesection{Languages}{2.6cm}
+
         \languages
-        
+
         %------------------------------------------------
-        
+
         %\vspace{1mm}
-         
-        \profilesection{Certifications}{1.8cm} 
-    
+
+        \profilesection{Certifications}{1.8cm}
+
         \certifications
-    
-        %------------------------------------------------      
-        
+
+        %------------------------------------------------
+
         %\vspace{1mm}
-         
-        \profilesection{Volunteering}{2cm} 
-    
+
+        \profilesection{Volunteering}{2cm}
+
         \volunteering
-    
-        %------------------------------------------------   
-        
+
+        %------------------------------------------------
+
         %\vspace{1mm}
-         
-        \profilesection{Notes}{4.3cm} 
-    
+
+        \profilesection{Notes}{4.3cm}
+
         \notes
-    
-        %------------------------------------------------   
-        
+
+        %------------------------------------------------
+
+        %------------------------------------------------
+
+        \profilesection{Skills}{4cm}
+        \givenskill
+        \giventextskill
+        %\noindent
+        %\scriptsize
+        %\noindent
+        %(*)[The skill scale is from 0 (Fundamental Awareness) to 5 (Expert).]
+
+        %------------------------------------------------
+        %------------------------------------------------
+
+        \profilesection{Soft Skills}{3cm}
+        \givensoftskill
+        \giventextsoftskill
+        \noindent
+        \scriptsize
+        \noindent
+        (*)[The skill scale is from 0 (Fundamental Awareness) to 5 (Expert).]
+
+        %------------------------------------------------
+
     \end{textblock}
 }
 
@@ -443,7 +525,7 @@
 
 % \newcommand{\twentyitem}[5]{%
 % 	#1&\parbox[t]{0.83\textwidth}{%
-% 		\textbf{#2}% 
+% 		\textbf{#2}%
 % 		\hfill%
 % 		{\footnotesize#3}\\%
 %         \ifblank{#4}{}{#4 \\}
@@ -453,7 +535,7 @@
 
 \newcommand{\twentyitem}[6]{%
 	#1&\parbox[t]{0.83\textwidth}{%
-		\textbf{#3}% 
+		\textbf{#3}%
 		\hfill%
 		{\footnotesize#4}%
         }\\%
