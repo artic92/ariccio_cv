@@ -13,6 +13,7 @@
 
 \usepackage{pstricks}
 
+\usepackage{academicons}
 \usepackage{fontawesome}
 \RequirePackage{tikz}
 \RequirePackage{xcolor}
@@ -355,6 +356,13 @@
               \end{array}
               $} & \href{https://twitter.com/\cvtwitter}{\cvtwitter} \\
             }
+        \ifthenelse{\equal{\cvlinkedin}{}}{}{
+          {$
+            \begin{array}{l}
+            \hspace{3mm} \huge \textnormal{\textcolor{linkedin}{\aiResearchGate}}
+            \end{array}
+            $} & \href{https://www.researchgate.net/profile/Antonio-Riccio-2}{\linkedinnameshown} \\
+          }
         \ifthenelse{\equal{\cvgithub}{}}{}{
             {$
               \begin{array}{l}
