@@ -15,6 +15,7 @@
 
 \usepackage{academicons}
 \usepackage{fontawesome}
+\usepackage{worldflags}
 \RequirePackage{tikz}
 \RequirePackage{xcolor}
 \RequirePackage[absolute,overlay]{textpos}
@@ -314,6 +315,13 @@
     \vspace{3mm}
     \renewcommand{\arraystretch}{2}
     \begin{tabular}{p{1cm} @{\hskip 0.5cm}p{5cm}}
+      \ifthenelse{\equal{\cvgithub}{}}{}{
+        {$
+          \begin{array}{l}
+          \hspace{3mm} \huge \textnormal{\worldflag[stretch=20, length=0mm, width=5mm]{IT}}
+          \end{array}
+          $} & Nationality \\
+        }
       \ifthenelse{\equal{\cvnumberphone}{}}{}{
       		{$
               \begin{array}{l}
@@ -369,7 +377,7 @@
               \hspace{3mm} \huge \textnormal{\faGithub}
               \end{array}
               $} & \href{https://www.github.com/\cvgithub}{\cvgithub} \\
-            }
+        }
     \end{tabular}
 
     %------------------------------------------------
