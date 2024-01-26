@@ -14,7 +14,7 @@
 \usepackage{pstricks}
 
 \usepackage{academicons}
-\usepackage{fontawesome}
+\usepackage{fontawesome5}
 \usepackage{worldflags}
 \RequirePackage{tikz}
 \RequirePackage{xcolor}
@@ -339,7 +339,7 @@
       \ifthenelse{\equal{\cvmail}{}}{}{
             {$
               \begin{array}{l}
-              \hspace{2.5mm} \huge \textnormal{\textcolor{yt}{\faEnvelopeO}}
+              \hspace{2.5mm} \huge \textnormal{\textcolor{yt}{\faEnvelope}}
               \end{array}
               $}
             & \href{mailto:\cvmail}{\cvmail} \\}
@@ -353,7 +353,7 @@
        \ifthenelse{\equal{\cvlinkedin}{}}{}{
             {$
               \begin{array}{l}
-              \hspace{3mm} \huge \textnormal{\textcolor{linkedin}{\faLinkedinSquare}}
+              \hspace{3mm} \huge \textnormal{\textcolor{linkedin}{\faLinkedin}}
               \end{array}
               $} & \href{https://www.linkedin.com/in/\cvlinkedin}{\linkedinnameshown} \\
             }
