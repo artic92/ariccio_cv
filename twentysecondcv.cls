@@ -140,8 +140,10 @@
 % Define custom commands for CV info
 \newcommand{\cvdate}[1]{\renewcommand{\cvdate}{#1}}
 \newcommand{\cvlinkedin}[1]{\renewcommand{\cvlinkedin}{#1}}
+\newcommand{\cvresearchgate}[1]{\renewcommand{\cvresearchgate}{#1}}
 \newcommand{\linkedinnameshown}[1]{\renewcommand{\linkedinnameshown}{#1}}
 \newcommand{\cvgithub}[1]{\renewcommand{\cvgithub}{#1}}
+\newcommand{\cvnationality}[1]{\renewcommand{\cvnationality}{#1}}
 \newcommand{\cvtwitter}[1]{\renewcommand{\cvtwitter}{#1}}
 \newcommand{\cvmail}[1]{\renewcommand{\cvmail}{#1}}
 \newcommand{\cvnumberphone}[1]{\renewcommand{\cvnumberphone}{#1}}
@@ -315,7 +317,7 @@
     \vspace{3mm}
     \renewcommand{\arraystretch}{2}
     \begin{tabular}{p{1cm} @{\hskip 0.5cm}p{5cm}}
-      \ifthenelse{\equal{\cvgithub}{}}{}{
+      \ifthenelse{\equal{\cvnationality}{}}{}{
         {$
           \begin{array}{l}
           \hspace{3mm} \huge \textnormal{\worldflag[stretch=20, length=0mm, width=5mm]{IT}}
@@ -329,13 +331,6 @@
               \end{array}
               $}
             & \cvnumberphone\\}
-      %\ifthenelse{\equal{\href{\cvsite}{\cvsite}}{}}{}{
-      %      {$
-      %        \begin{array}{l}
-      %        \hspace{2.8mm} \huge \textnormal{\textcolor{test}{\faGlobe}}
-      %        \end{array}
-      %        $}
-      %      & \href{http://\cvsite}{\cvsite} \\}
       \ifthenelse{\equal{\cvmail}{}}{}{
             {$
               \begin{array}{l}
@@ -343,6 +338,13 @@
               \end{array}
               $}
             & \href{mailto:\cvmail}{\cvmail} \\}
+      \ifthenelse{\equal{\href{\cvsite}{\cvsite}}{}}{}{
+           {$
+             \begin{array}{l}
+             \hspace{2.8mm} \huge \textnormal{\textcolor{test}{\faGlobe}}
+             \end{array}
+             $}
+           & \href{https://\cvsite}{\cvsite} \\}
       \ifthenelse{\equal{\cvaddress}{}}{}{
       		{$
               \begin{array}{l}
@@ -364,7 +366,7 @@
               \end{array}
               $} & \href{https://twitter.com/\cvtwitter}{\cvtwitter} \\
             }
-        \ifthenelse{\equal{\cvlinkedin}{}}{}{
+        \ifthenelse{\equal{\cvresearchgate}{}}{}{
           {$
             \begin{array}{l}
             \hspace{3mm} \huge \textnormal{\textcolor{linkedin}{\aiResearchGate}}
