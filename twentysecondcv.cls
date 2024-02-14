@@ -300,6 +300,13 @@
   %------------------------------------------------
 
   \begin{textblock}{6}(0.5, 0.2)
+    %------------------------------------------------
+
+    \begin{tikzpicture}[x=\imagescale,y=-\imagescale]
+    \clip (600/2, 567/2) circle (567/2);
+
+    \node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{\profilepic}};
+    \end{tikzpicture}
 
     %------------------------------------------------
 
