@@ -460,9 +460,9 @@
 
         %\vspace{1mm}
 
-        \profilesection{Notes}{4.3cm}
+        % \profilesection{Notes}{4.3cm}
 
-        \notes
+        % \notes
 
         %------------------------------------------------
 
