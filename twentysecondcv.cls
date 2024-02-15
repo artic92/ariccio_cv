@@ -444,12 +444,9 @@
         %------------------------------------------------
 
         \profilesection{Skills}{4cm}
+
         \givenskill
         \giventextskill
-        %\noindent
-        %\scriptsize
-        %\noindent
-        %(*)[The skill scale is from 0 (Fundamental Awareness) to 5 (Expert).]
 
         %------------------------------------------------
         %------------------------------------------------
