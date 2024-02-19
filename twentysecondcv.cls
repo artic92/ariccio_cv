@@ -149,6 +149,7 @@
 \newcommand{\cvnumberphone}[1]{\renewcommand{\cvnumberphone}{#1}}
 \newcommand{\cvaddress}[1]{\renewcommand{\cvaddress}{#1}}
 \newcommand{\cvsite}[1]{\renewcommand{\cvsite}{#1}}
+\newcommand{\cvsiteshown}[1]{\renewcommand{\cvsiteshown}{#1}}
 \newcommand{\aboutme}[1]{\renewcommand{\aboutme}{#1}}
 \newcommand{\profilepic}[1]{\renewcommand{\profilepic}{#1}}
 \newcommand{\cvname}[1]{\renewcommand{\cvname}{#1}}
@@ -317,7 +318,8 @@
              \hspace{2.8mm} \huge \textnormal{\textcolor{test}{\faGlobe}}
              \end{array}
              $}
-           & \href{https://\cvsite}{\cvsite} \\}
+           & \href{https://\cvsite}{\cvsiteshown} \\
+           }
       \ifthenelse{\equal{\cvaddress}{}}{}{
       		{$
               \begin{array}{l}
