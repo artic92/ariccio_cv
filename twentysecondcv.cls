@@ -359,13 +359,13 @@
 
     %------------------------------------------------
 
-    \profilesection{Interests}{3cm}
+    \profilesection{Interessen}{2.5cm}
 
     \interests
 
     %------------------------------------------------
 
-    \profilesection{About Me}{3cm}
+    \profilesection{Über Mich}{2.5cm}
 
     \aboutme
 
@@ -373,7 +373,7 @@
 
     %\vspace{1mm}
 
-    \profilesection{Education}{2.8cm}
+    \profilesection{Bildung}{2.8cm}
 
     \education
 
@@ -413,7 +413,7 @@
 
         %\vspace{1mm}
 
-        \profilesection{Languages}{2.6cm}
+        \profilesection{Sprachen}{2.8cm}
 
         \languages
 
@@ -421,7 +421,7 @@
 
         %\vspace{1mm}
 
-        \profilesection{Certifications}{1.8cm}
+        \profilesection{Zertifikate}{2.6cm}
 
         \certifications
 
@@ -429,7 +429,7 @@
 
         %\vspace{1mm}
 
-        \profilesection{Volunteering}{2cm}
+        \profilesection{Freiwillige Arbeit}{0.8cm}
 
         \volunteering
 
@@ -445,7 +445,7 @@
 
         %------------------------------------------------
 
-        \profilesection{Skills}{4cm}
+        \profilesection{Fähigkeiten}{2.5cm}
 
         \givenskill
         \giventextskill
