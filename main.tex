@@ -277,17 +277,33 @@
 %----------------------------------------------------------------------------------------
 \section{Projects}
 
-\textbf{Multi-Process Control System with Triple Modular Redundancy (C)}
+\textbf{Multi-Process Control System with Triple Modular Redundancy}
+\vspace{1 mm}
+\begin{itemize}
+    \item Object oriented design and C coding of a framework for testing control laws of a spacecraft that carries cargo. Employed Linux inter-process primitives.
+    \item Unit and integration tests executed in a containerised environment.
+\end{itemize}
 
-During my personal time, I developed a versatile control system featuring sensors, actuators, and controllers configured in an open-loop setup. By incorporating a flag-based mechanism, the system seamlessly transitions to a Triple Modular Redundancy (TMR) scheme, enhancing reliability through sensor replication and data filtering. Each system component is mapped to an independent Linux process, facilitating modularization and communication through abstracted channels, currently implemented via Linux message queues. Notably, the system boasts flexibility in control laws, allowing for seamless swapping without necessitating full code recompilation. This project showcases my proficiency in system design, flexibility in implementation, and commitment to robust, maintainable solutions.
+\textit{Skills}: Object oriented design, C, Docker.
 
-\textbf{GNSS Synchronisation \& Bistatic Passive Radar (VHDL, C)}
+\textbf{GNSS Synchronisation \& Bistatic Passive Radar}
 
-I initiated a collaboration with a defense company to contribute to the development of a bistatic passive radar. In this capacity, I tackled the challenge of identifying the strongest Doppler frequency among satellite signals. Utilizing innovative techniques, I divided the task into two subblocks, optimizing resource usage by computing signal magnitudes on-the-fly. Leveraging Xilinx platforms, I integrated the Xilinx DDS compiler for flexible signal generation and devised a comprehensive testbench. Furthermore, I engineered Linux drivers for a software proof of concept, demonstrating functionality to stakeholders. Through meticulous error analysis and documentation, I ensured minimal discrepancies between the developed IP core and provided sample data. This project underscores my ability to deliver impactful solutions and collaborate effectively in complex technical environments.
+\begin{itemize}
+    \item Design and VHDL coding of the system in charge of finding the strongest doppler frequency among a given set of visible satellites in an embedded
+    \item Object oriented design, embedded C development of Board Support Package and Linux device drivers.
+    \item Unit and integration tests executed on Xilinx Zynq-7010 SoC.
+\end{itemize}
 
-\textbf{Arithmetic Logic Unit Implementation (VHDL)}
+\textit{Skills}: Object oriented design, C, VHDL, Linux, Device Drivers, Xilinx, GHDL.
 
-As a leader and integral team member in a university project, I spearheaded the design and implementation of an Arithmetic Logic Unit (ALU) on a Xlinx Spartan 3E FPGA. My responsibilities ranged from project supervision to the development of critical components. Through careful evaluation and selection of optimal solutions, I demonstrated expertise in hardware design and project management. Effective communication of our progress and findings to stakeholders further underscored my ability to deliver impactful results in complex technical projects. This experience significantly enhanced my skills in hardware design, project management, and communication, positioning me as a versatile and capable professional in the field.
+\textbf{Arithmetic Logic Unit Implementation}
+
+\begin{itemize}
+    \item Design and VHDL coding of an integer Arithmetic Logic Unit (ALU) for Xilinx FPGAs. Project available on Github.
+    \item Unit and integration tests executed via GHDL and then on Xilinx Spartan 3E FPGA.
+\end{itemize}
+
+\textbf{\textit{Skills}}: VHDL, GHDL, Xilinx Spartan 3E FPGA, Git, Github, Github Actions.
 
 %----------------------------------------------------------------------------------------
 %	 RESEARCH
