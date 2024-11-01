@@ -413,9 +413,9 @@
 
         %\vspace{1mm}
 
-        \profilesection{Languages}{2.6cm}
+        % \profilesection{Languages}{2.6cm}
 
-        \languages
+        % \languages
 
         %------------------------------------------------
 
