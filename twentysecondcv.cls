@@ -373,9 +373,9 @@
 
     %\vspace{1mm}
 
-    \profilesection{Education}{2.8cm}
+    % \profilesection{Education}{2.8cm}
 
-    \education
+    % \education
 
     %------------------------------------------------
 
