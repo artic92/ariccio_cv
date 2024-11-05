@@ -207,8 +207,8 @@
 \newcommand{\giventextskill}{}
 
 % Command for printing softskills
-\newcommand\softskills[1]{
-  \renewcommand{\softskills}{
+\newcommand\keyskills[1]{
+  \renewcommand{\keyskills}{
     {#1}
   }
 }
@@ -332,7 +332,7 @@
               \begin{array}{l}
               \hspace{3mm} \huge \textnormal{\textcolor{linkedin}{\faLinkedin}}
               \end{array}
-              $} & \href{https://www.linkedin.com/in/\cvlinkedin}{\linkedinnameshown} \\
+              $} & \href{https://www.linkedin.com/in/\cvlinkedin}{\linkedinnameshown}
             }
         \ifthenelse{\equal{\cvtwitter}{}}{}{
             {$
@@ -359,15 +359,9 @@
 
     %------------------------------------------------
 
-    \profilesection{Interests}{3cm}
+    % \profilesection{Interests}{3cm}
 
-    \interests
-
-    %------------------------------------------------
-
-    \profilesection{About Me}{3cm}
-
-    \aboutme
+    % \interests
 
     %------------------------------------------------
 
@@ -378,6 +372,10 @@
     % \education
 
     %------------------------------------------------
+
+    \profilesection{Key Skills}{3cm}
+
+    \keyskills
 
   \end{textblock}
 }
@@ -411,6 +409,19 @@
 
         %------------------------------------------------
 
+        % \profilesection{Skills}{4cm}
+
+        % \givenskill
+        % \giventextskill
+
+        %------------------------------------------------
+
+        \profilesection{About Me}{3cm}
+
+        \aboutme
+
+        %------------------------------------------------
+
         %\vspace{1mm}
 
         % \profilesection{Languages}{2.6cm}
@@ -440,22 +451,6 @@
         % \profilesection{Notes}{4.3cm}
 
         % \notes
-
-        %------------------------------------------------
-
-        %------------------------------------------------
-
-        \profilesection{Skills}{4cm}
-
-        \givenskill
-        \giventextskill
-
-        %------------------------------------------------
-        %------------------------------------------------
-
-        \profilesection{Soft Skills}{3cm}
-
-        \softskills
 
         %------------------------------------------------
 
@@ -549,6 +544,19 @@
 		#2%
 	}\\
 }
+
+%----------------------------------------------------------------------------------------
+%	 SKILL TABLE ENVIRONMENT
+%----------------------------------------------------------------------------------------
+
+\newenvironment{skilltable}{%
+  \renewcommand{\arraystretch}{1.3}
+  \begin{tabular}{p{6cm}}
+}{%
+	\end{tabular}
+}
+
+\newcommand{\skillitem}[1]{#1 \\}
 
 %----------------------------------------------------------------------------------------
 %	 MARGINS AND LINKS
