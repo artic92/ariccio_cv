@@ -200,16 +200,26 @@
         {\href{https://www.exploration.space/}{The Exploration Company, Munich, \textbf{Germany}}}
         {}
         {
-            Flight control software for the \textit{Mission Possible} spacecraft.
-            \vspace{1 mm}
+            \vspace{2 mm}
+            \underline{\textbf{Project}: spacecraft carrying cargo to Earth orbit.}
+
+            \vspace{2 mm}
             \begin{itemize}
-                \item Developed applications  using NASA's cFS framework.
-                \item Ensured code compliance with MISRA and JPL guidelines.
-                \item Enabled successful testing of applications by leveraging serial emulation tools and Python scripts, proving the software's functionality even in the absence of physical sensors.
+                \item UML architectural and detailed design,  MISRA-compliant embedded C development of software that collects data from different sensors and sends commands to actuators. Employed \textit{socat} library.
+                \item Unit and integration in a Docker environment.  System tests on a Zynq UltraScale+ XCZU9EG MPSoC hardware platform. Employed Petalinux for Linux filesystem customisation and Github Actions for static analysis and cross-compilation.
             \end{itemize}
 
-            \vspace{1 mm}
-            \textit{Keywords}: \textbf{C}, \textbf{Python}, \textbf{Linux}, \textbf{Docker}, \textbf{Hardware-in-the-loop}, \textbf{Agile}.
+            \vspace{2 mm}
+            \underline{\textbf{Project}: control system with Triple Modular Redundancy (TMR)}
+
+            \vspace{2 mm}
+            \begin{itemize}
+                \item Object-oriented design and C coding of a framework for simulating flight control laws. Employed the Linux inter-process-comms APIs.
+                \item Unit and integration tests executed in a Docker environment.
+            \end{itemize}
+
+            \vspace{2 mm}
+            \textbf{\textit{Skills}}: MISRA, object-oriented design, C, Linux, socat, Docker, Petalinux, Agile, Github Actions.
         }\\
     \twentyitem
         {Apr 2023 -}
@@ -291,15 +301,6 @@
 %	 PERSONAL PROJECTS
 %----------------------------------------------------------------------------------------
 \section{Personal Projects}
-
-\textbf{Multi-Process Control System with Triple Modular Redundancy}
-\vspace{1 mm}
-\begin{itemize}
-    \item Object oriented design and C coding of a framework for testing control laws of a spacecraft that carries cargo. Employed Linux inter-process primitives.
-    \item Unit and integration tests executed in a containerised environment.
-\end{itemize}
-
-\textit{Skills}: Object oriented design, C, Docker.
 
 \textbf{GNSS Synchronisation \& Bistatic Passive Radar}
 
