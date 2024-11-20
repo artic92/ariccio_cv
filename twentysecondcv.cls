@@ -151,6 +151,7 @@
 \newcommand{\cvsite}[1]{\renewcommand{\cvsite}{#1}}
 \newcommand{\cvsiteshown}[1]{\renewcommand{\cvsiteshown}{#1}}
 \newcommand{\aboutme}[1]{\renewcommand{\aboutme}{#1}}
+\newcommand{\researchpapers}[1]{\renewcommand{\researchpapers}{#1}}
 \newcommand{\profilepic}[1]{\renewcommand{\profilepic}{#1}}
 \newcommand{\cvname}[1]{\renewcommand{\cvname}{#1}}
 \newcommand{\cvjobtitle}[1]{\renewcommand{\cvjobtitle}{#1}}
@@ -424,17 +425,17 @@
 
         %\vspace{1mm}
 
-        % \profilesection{Languages}{2.6cm}
+        \profilesection{Certifications}{1.8cm}
 
-        % \languages
+        \certifications
 
         %------------------------------------------------
 
         %\vspace{1mm}
 
-        \profilesection{Certifications}{1.8cm}
+        \profilesection{Reasearch Papers}{0.4cm}
 
-        \certifications
+        \researchpapers
 
         %------------------------------------------------
 
