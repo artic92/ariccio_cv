@@ -417,7 +417,7 @@
 
         %------------------------------------------------
 
-        \profilesection{About Me}{3cm}
+        \profilesection{Summary}{3cm}
 
         \aboutme
 
