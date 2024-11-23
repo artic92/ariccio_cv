@@ -26,19 +26,23 @@ jobs:
           latex-compiler /bin/bash -c \
           "cd /latex && make clean && make"
 
+    - name: Extract tag name
+      id: get_tag
+      run: echo "TAG_NAME=${GITHUB_REF##*/}" >> $GITHUB_ENV
+
+    - name: Rename output PDF
+      run: mv ./build/ariccio_cv.pdf ./build/ariccio_cv_${{ env.TAG_NAME }}.pdf
+
     - name: Create Release
       id: create_release
       uses: actions/create-release@v1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        RELEASE_TAG_NAME: ${{ github.ref }}
-        RELEASE_NAME: Release ${{ github.ref }}
-        RELEASE_BODY: |
-          Describe your release here.
       with:
-        tag_name: ${{ env.RELEASE_TAG_NAME }}
-        release_name: ${{ env.RELEASE_NAME }}
-        body: ${{ env.RELEASE_BODY }}
+        tag_name: ${{ env.TAG_NAME }}
+        release_name: Release ${{ env.TAG_NAME }}
+        body: |
+          Describe your release here.
 
     - name: Upload PDF as Release Asset
       uses: actions/upload-release-asset@v1
@@ -46,6 +50,6 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: ./build/ariccio_cv.pdf
-        asset_name: ariccio_cv.pdf
+        asset_path: ./build/ariccio_cv_${{ env.TAG_NAME }}.pdf
+        asset_name: ariccio_cv_${{ env.TAG_NAME }}.pdf
         asset_content_type: application/pdf
