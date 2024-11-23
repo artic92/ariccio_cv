@@ -24,7 +24,7 @@ jobs:
         docker run --rm \
           --volume ${{ github.workspace }}:/latex \
           latex-compiler /bin/bash -c \
-          "cd /latex && make clean && make"
+          "cd /latex && make clean && make && chown -R $(id -u):$(id -g) build"
 
     - name: Extract tag name
       id: get_tag

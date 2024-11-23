@@ -21,6 +21,7 @@ RUN apt-get -y install --no-install-recommends \
     texlive-fonts-recommended \
     texlive-xetex \
     texlive-pstricks \
+    fonts-clear-sans \
     biber chktex latexmk make python3-pygments python3-pkg-resources
 
 # latexindent modules
