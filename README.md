@@ -54,7 +54,7 @@ When you first run Docker with the provided configuration, it may take more time
    - Navigate to the directory containing the LaTeX files.
    - Run the following command to compile the LaTeX code using `xelatex`:
      ```bash
-     xelatex -output-directory=build main.tex
+     xelatex -output-directory=build ariccio_cv.tex
      ```
    - On Linux, you can use the provided script:
      ```bash
