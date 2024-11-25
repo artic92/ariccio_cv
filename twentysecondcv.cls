@@ -356,11 +356,9 @@
 
     %------------------------------------------------
 
-    %\vspace{1mm}
+    \profilesection{Summary}{3cm}
 
-    % \profilesection{Education}{2.8cm}
-
-    % \education
+    \aboutme
 
     %------------------------------------------------
 
@@ -404,12 +402,6 @@
 
         % \givenskill
         % \giventextskill
-
-        %------------------------------------------------
-
-        \profilesection{Summary}{3cm}
-
-        \aboutme
 
         %------------------------------------------------
 
