@@ -350,12 +350,6 @@
 
     %------------------------------------------------
 
-    % \profilesection{Interests}{3cm}
-
-    % \interests
-
-    %------------------------------------------------
-
     \profilesection{Summary}{3cm}
 
     \aboutme
@@ -392,20 +386,9 @@
 
         %------------------------------------------------
 
-        %------------------------------------------------
-
         {\Large\color{black!80}\cvjobtitle}
 
         %------------------------------------------------
-
-        % \profilesection{Skills}{4cm}
-
-        % \givenskill
-        % \giventextskill
-
-        %------------------------------------------------
-
-        %\vspace{1mm}
 
         \profilesection{Certifications}{1.8cm}
 
@@ -413,27 +396,15 @@
 
         %------------------------------------------------
 
-        %\vspace{1mm}
-
         \profilesection{Reasearch Papers}{0.4cm}
 
         \researchpapers
 
         %------------------------------------------------
 
-        %\vspace{1mm}
-
         \profilesection{Volunteering}{2cm}
 
         \volunteering
-
-        %------------------------------------------------
-
-        %\vspace{1mm}
-
-        % \profilesection{Notes}{4.3cm}
-
-        % \notes
 
         %------------------------------------------------
 
@@ -486,16 +457,6 @@
 }{%
 	\end{tabular*}
 }
-
-% \newcommand{\twentyitem}[5]{%
-% 	#1&\parbox[t]{0.83\textwidth}{%
-% 		\textbf{#2}%
-% 		\hfill%
-% 		{\footnotesize#3}\\%
-%         \ifblank{#4}{}{#4 \\}
-% 		#5\vspace{\parsep}%
-% 	}\\
-% }
 
 \newcommand{\twentyitem}[6]{%
 	#1&\parbox[t]{0.83\textwidth}{%
