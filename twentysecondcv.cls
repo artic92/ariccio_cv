@@ -280,7 +280,7 @@
     %------------------------------------------------
 
     \vspace{3mm}
-    \renewcommand{\arraystretch}{2}
+    \renewcommand{\arraystretch}{1.8}
     \begin{tabular}{p{1cm} @{\hskip 0.5cm}p{5cm}}
       \ifthenelse{\equal{\cvnationality}{}}{}{
         {$
