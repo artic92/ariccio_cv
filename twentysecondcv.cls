@@ -347,11 +347,11 @@
               $} & \href{https://www.github.com/\cvgithub}{\cvgithub} \\
         }
     \end{tabular}
-
+    %
     %------------------------------------------------
-
+    %
     \profilesection{Summary}{3cm}
-
+    %
     \aboutme
 
     %------------------------------------------------
