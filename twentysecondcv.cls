@@ -396,7 +396,7 @@
 
         %------------------------------------------------
 
-        \profilesection{Reasearch Papers}{0.4cm}
+        \profilesection{Research Papers}{0.4cm}
 
         \researchpapers
 
